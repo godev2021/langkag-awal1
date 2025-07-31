@@ -1,0 +1,56 @@
+export const dataDetailEmployee = {
+    id: 2,
+    name: 'Ayu Lestari',
+    nik: 'NIK002',
+    reportingManager: 1,
+    jobTitle: 'Digital Marketing Specialist',
+    jobLevel: 'Senior',
+    departmentName: 'Data Management',
+    divisionName: 'Digital Marketing',
+    active: true,
+    threeSixtyReviews: [
+        {
+            employeeId: 2,
+            reviewerId: 2,
+            reviewerName: 'Fajar',
+            reviewScore: 4.5,
+            reviewContribution: 'Punya kepemimpinan alami.',
+            reviewStrength: 'Punya kepemimpinan alami.',
+            reviewDevelopment: 'Perlu lebih terbuka terhadap feedback.',
+            type: 'self',
+        },
+        {
+            employeeId: 2,
+            reviewerId: 2,
+            reviewerName: 'Bedul',
+            reviewScore: 1.8,
+            reviewContribution:
+                'Cukup teliti dalam beberapa tugas administratif.',
+            reviewStrength: 'Cukup teliti dalam beberapa tugas administratif.',
+            reviewDevelopment:
+                'Butuh pembinaan dalam hal tanggung jawab pekerjaan dan komitmen.',
+            type: 'manager',
+        },
+    ],
+    summarizedReview:
+        '1. Strength: Mampu menjaga motivasi tim, Berpartisipasi baik dalam proyek lintas tim.\n2. Weakness: Butuh pelatihan lebih dalam time management.\n3. Opportunity: Meningkatkan efisiensi dan produktivitas tim dengan time management yang lebih baik, Memperluas networking dan kolaborasi melalui proyek lintas tim.\n4. Threat: Kehilangan kepercayaan tim jika time management tidak diperbaiki, Keterlambatan penyelesaian proyek karena time management yang kurang baik.\n5. Emotion & Sentiment Analysis: Positif (motivasi tim, partisipasi), Netral (kebutuhan pelatihan time management).\n6. Insight: Ayu Lestari memiliki kemampuan interpersonal yang baik dan berkontribusi positif dalam tim, namun perlu meningkatkan keterampilan time management untuk mencapai potensi maksimal.\n7. Summarize: Ayu Lestari memiliki kekuatan dalam memotivasi tim dan berkolaborasi, namun perlu mengembangkan time management untuk meningkatkan kinerja dan menghindari potensi masalah.\n',
+    performance: {
+        employeeId: 3,
+        name: 'Fajar',
+        kpiScore: 30.45,
+        reviewScore: 13.5,
+        kudosScore: 0.0,
+        absenceScore: 4.55,
+        finalTotalScore: 48.5,
+        clustering: 'Under Perform',
+        timestamp: '2025-07-27T23:32:21.650819',
+    },
+    attendance: {
+        id: 0,
+        employeeId: null,
+        totalAbsence: 1,
+        totalSick: 13,
+        totalWfh: 0,
+        totalLateDays: 15,
+    },
+};
