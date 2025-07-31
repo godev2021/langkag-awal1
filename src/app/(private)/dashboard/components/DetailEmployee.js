@@ -9,7 +9,6 @@ const DetailEmployee = ({ isOpen, setIsOpen, detailEmployee }) => {
     const dataEmployee = detailEmployee.data;
     const [isKpiModalOpen, setIsKpiModalOpen] = useState(false);
     const [kpiScore, setKpiScore] = useState('');
-
     const columns360 = [
         {
             key: 'reviewerName',
@@ -67,26 +66,26 @@ const DetailEmployee = ({ isOpen, setIsOpen, detailEmployee }) => {
     ];
 
     const totalKudos =
-        dataEmployee?.kudosResult?.CLevel +
-        dataEmployee?.kudosResult?.manager +
-        dataEmployee?.kudosResult?.peer;
+        dataEmployee?.kudosResult?.kudosCLevel +
+        dataEmployee?.kudosResult?.kudosManager +
+        dataEmployee?.kudosResult?.kudosPeer;
     const kudosData = [
         {
             name: 'C Level',
-            value: dataEmployee?.kudosResult?.CLevel ?? 0,
-            percent: (dataEmployee?.kudosResult?.CLevel / totalKudos) * 100,
+            value: dataEmployee?.kudosResult?.kudosCLevel ?? 0,
+            percent: (dataEmployee?.kudosResult?.kudosCLevel / totalKudos) * 100,
             color: '#22c55e',
         },
         {
             name: 'Manager',
-            value: dataEmployee?.kudosResult?.manager ?? 0,
-            percent: dataEmployee?.kudosResult?.manager / totalKudos,
+            value: dataEmployee?.kudosResult?.kudosManager ?? 0,
+            percent: dataEmployee?.kudosResult?.kudosManager / totalKudos,
             color: '#3b82f6',
         },
         {
             name: 'Peer',
-            value: dataEmployee?.kudosResult?.peer ?? 0,
-            percent: dataEmployee?.kudosResult?.peer / totalKudos,
+            value: dataEmployee?.kudosResult?.kudosPeer ?? 0,
+            percent: dataEmployee?.kudosResult?.kudosPeer / totalKudos,
             color: '#ef4444',
         },
     ];
@@ -190,7 +189,7 @@ const DetailEmployee = ({ isOpen, setIsOpen, detailEmployee }) => {
                                     'Principal',
                                 ];
                                 const currentIndex = milestonePath.indexOf(
-                                    detailEmployee?.jobLevel
+                                    dataEmployee?.jobLevel
                                 );
                                 return milestonePath.map((level, idx) => {
                                     const reached = idx <= currentIndex;
